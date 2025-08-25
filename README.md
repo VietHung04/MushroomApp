@@ -1,4 +1,4 @@
-## Ứng dụng Phân loại Nấm bằng Thuật toán ID3##
+## Ứng dụng Phân loại Nấm bằng Thuật toán ID3 ##
 **Giới thiệu**
 
 Dự án này xây dựng một ứng dụng web đơn giản bằng Flask để dự đoán xem một cây nấm ăn được hay không ăn được dựa trên 3 thuộc tính:
