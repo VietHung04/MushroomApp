@@ -29,8 +29,10 @@ Chỉ sử dụng 3 feature chính (cap-shape, cap-surface, cap-color) để d�
 
 ## Giao diện minh họa
 <img width="1783" height="646" alt="image" src="https://github.com/user-attachments/assets/967a6679-6507-481b-a067-811c2f9af8f1" />
+
 **Nấm ăn được**
 <img width="1746" height="780" alt="image" src="https://github.com/user-attachments/assets/8702f5c0-8a7c-4cca-9ac4-f11ac37e5f02" />
+
 **Nấm không ăn được**
 <img width="1761" height="757" alt="image" src="https://github.com/user-attachments/assets/1d708325-673f-484b-a22f-bcac8cbd0009" />
 
