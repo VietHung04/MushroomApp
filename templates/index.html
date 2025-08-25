@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân loại Nấm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="text-center text-success">🌿 Phân loại Nấm 🌿</h2>
+    <p class="text-center text-muted">Chọn các thuộc tính bên dưới để dự đoán nấm ăn được hay không</p>
+
+    <form method="POST" class="card p-4 shadow-sm">
+        <!-- Cap Shape -->
+        <div class="mb-3">
+            <label class="form-label"><b>Cap Shape (Hình dáng mũ nấm)</b></label>
+            <select name="cap-shape" class="form-select" required>
+                {% for key, value in feature_columns['cap-shape'].items() %}
+                <option value="{{ key }}" {% if request.form.get('cap-shape') == key %}selected{% endif %}>{{ value }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Cap Surface -->
+        <div class="mb-3">
+            <label class="form-label"><b>Cap Surface (Bề mặt mũ nấm)</b></label>
+            <select name="cap-surface" class="form-select" required>
+                {% for key, value in feature_columns['cap-surface'].items() %}
+                <option value="{{ key }}" {% if request.form.get('cap-surface') == key %}selected{% endif %}>{{ value }}</option>
+
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Cap Color -->
+        <div class="mb-3">
+            <label class="form-label"><b>Cap Color (Màu sắc mũ nấm)</b></label>
+            <select name="cap-color" class="form-select" required>
+                {% for key, value in feature_columns['cap-color'].items() %}
+                <option value="{{ key }}" {% if request.form.get('cap-color') == key %}selected{% endif %}>{{ value }}</option>
+
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">🚀 Dự đoán</button>
+    </form>
+
+    {% if result %}
+    <div class="alert alert-info mt-4 text-center">
+        <h4>{{ result }}</h4>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
